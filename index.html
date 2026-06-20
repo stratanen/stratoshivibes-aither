@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ΑΙΘΗΡ Badge · StratoshiVibes</title>
+<style>
+  :root{
+    --navy:#0E2038; --navy-deep:#0B1A30; --panel:#13283F;
+    --cyan:#22D3EE; --cyan-soft:#7FE9F5; --line:#1B3A5B;
+    --text:#EAF6FB; --muted:#5A8BA8; --green:#4ADE80; --red:#F87171;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{
+    font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
+    background:radial-gradient(circle at 50% 0%,#102b4a 0%,#08111f 70%);
+    color:var(--text); min-height:100vh;
+    display:flex;align-items:center;justify-content:center;
+    padding:24px;
+  }
+  .wrap{width:100%;max-width:420px;text-align:center}
+  .brand{display:flex;align-items:center;justify-content:center;gap:10px;margin-bottom:6px}
+  .mono-logo{
+    width:34px;height:34px;border-radius:9px;border:1.5px solid var(--cyan);
+    display:flex;align-items:center;justify-content:center;
+    font-family:ui-sans-serif,system-ui,sans-serif;font-weight:700;font-size:19px;color:var(--cyan)
+  }
+  .brand h1{font-family:ui-sans-serif,system-ui,sans-serif;font-size:17px;font-weight:500;letter-spacing:.4px}
+  .tagline{font-size:10px;letter-spacing:4px;color:var(--muted);margin-bottom:22px}
+  .tagline b{color:var(--cyan-soft);letter-spacing:6px;font-weight:500}
+  .badge-frame{
+    background:var(--navy);border:1px solid var(--line);border-radius:18px;
+    padding:14px;margin:0 auto 20px;width:300px;max-width:100%
+  }
+  .badge-frame svg{display:block;width:100%;height:auto}
+  .preview-note{font-size:9px;letter-spacing:2px;color:var(--muted);margin-bottom:18px}
+  button{
+    font-family:inherit;width:100%;padding:14px;border-radius:12px;cursor:pointer;
+    background:var(--cyan);color:#06283D;border:none;font-weight:700;font-size:14px;
+    letter-spacing:.5px;transition:opacity .15s,transform .1s
+  }
+  button:hover{opacity:.9} button:active{transform:scale(.99)}
+  button:disabled{background:var(--panel);color:var(--muted);cursor:not-allowed}
+  button.secondary{background:transparent;border:1px solid var(--line);color:var(--cyan-soft)}
+  .status{
+    margin-top:16px;font-size:12px;line-height:1.7;min-height:20px;
+    color:var(--muted);word-break:break-word
+  }
+  .status a{color:var(--cyan);text-decoration:none;border-bottom:1px solid var(--line)}
+  .status .ok{color:var(--green)} .status .err{color:var(--red)}
+  .meta{
+    margin-top:24px;padding-top:16px;border-top:1px solid var(--line);
+    font-size:9px;letter-spacing:1.5px;color:#2A4A63;line-height:1.9
+  }
+  .meta code{color:var(--muted)}
+  .sb{color:#3E6B86;letter-spacing:2px;font-size:9px;margin-top:6px}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="brand">
+    <div class="mono-logo">S</div>
+    <h1>StratoshiVibes</h1>
+  </div>
+  <div class="tagline"><b>ΑΙΘΗΡ</b> &nbsp;·&nbsp; ΤΟ ΠΕΜΠΤΟ ΣΤΟΙΧΕΙΟ</div>
+
+  <div class="badge-frame" id="badgeFrame">
+    <!-- preview SVG (placeholder τιμές μέχρι να γίνει mint) -->
+    <svg viewBox="0 0 300 388" xmlns="http://www.w3.org/2000/svg">
+      <rect x="0" y="0" width="300" height="388" rx="18" fill="#0E2038" stroke="#1B3A5B"/>
+      <rect x="6" y="6" width="288" height="376" rx="14" fill="none" stroke="#22D3EE" stroke-width="0.75" opacity="0.45"/>
+      <circle cx="44" cy="48" r="21" fill="#0B1A30" stroke="#22D3EE" stroke-width="1.5"/>
+      <text x="44" y="56" font-family="sans-serif" font-size="23" font-weight="700" fill="#22D3EE" text-anchor="middle">S</text>
+      <text x="78" y="44" font-family="sans-serif" font-size="15" font-weight="500" fill="#EAF6FB">StratoshiVibes</text>
+      <text x="78" y="60" font-family="monospace" font-size="8" letter-spacing="2.5" fill="#5A8BA8">FOUNDING MEMBER</text>
+      <line x1="24" y1="82" x2="276" y2="82" stroke="#1B3A5B" stroke-width="0.5"/>
+      <line x1="78" y1="106" x2="112" y2="106" stroke="#22D3EE" stroke-width="0.5" opacity="0.5"/>
+      <text x="150" y="111" font-family="sans-serif" font-size="16" font-weight="500" letter-spacing="7" fill="#22D3EE" text-anchor="middle">ΑΙΘΗΡ</text>
+      <line x1="188" y1="106" x2="222" y2="106" stroke="#22D3EE" stroke-width="0.5" opacity="0.5"/>
+      <text x="150" y="127" font-family="monospace" font-size="7" letter-spacing="3" fill="#4E7A98" text-anchor="middle">ΤΟ ΠΕΜΠΤΟ ΣΤΟΙΧΕΙΟ</text>
+      <text x="150" y="158" font-family="monospace" font-size="9" letter-spacing="3.5" fill="#5A8BA8" text-anchor="middle">ETHEREUM / USD</text>
+      <text x="150" y="202" font-family="monospace" font-size="42" font-weight="700" fill="#EAF6FB" text-anchor="middle">$3,847</text>
+      <text x="150" y="225" font-family="monospace" font-size="11" fill="#4ADE80" text-anchor="middle">▲ +83.2% since mint</text>
+      <rect x="24" y="244" width="252" height="80" rx="11" fill="#13283F"/>
+      <text x="42" y="268" font-family="monospace" font-size="7.5" letter-spacing="1.5" fill="#5A8BA8">JOINED AT</text>
+      <text x="42" y="288" font-family="monospace" font-size="16" fill="#CBE9F5">$2,100</text>
+      <text x="258" y="268" font-family="monospace" font-size="7.5" letter-spacing="1.5" fill="#5A8BA8" text-anchor="end">SERIAL</text>
+      <text x="258" y="288" font-family="monospace" font-size="16" fill="#CBE9F5" text-anchor="end">#042</text>
+      <line x1="42" y1="300" x2="258" y2="300" stroke="#1B3A5B" stroke-width="0.5"/>
+      <text x="150" y="316" font-family="monospace" font-size="9" letter-spacing="1.5" fill="#7FA8C2" text-anchor="middle">MINTED · 14 JUN 2026</text>
+      <text x="150" y="350" font-family="monospace" font-size="8" letter-spacing="2" fill="#3E6B86" text-anchor="middle">SOULBOUND · NON-TRANSFERABLE</text>
+      <text x="150" y="368" font-family="monospace" font-size="8" letter-spacing="3" fill="#2A4A63" text-anchor="middle">BASE NETWORK</text>
+    </svg>
+  </div>
+  <div class="preview-note" id="previewNote">PREVIEW · ΟΙ ΤΙΜΕΣ ΕΙΝΑΙ ΕΝΔΕΙΚΤΙΚΕΣ</div>
+
+  <button id="actionBtn">Σύνδεση Wallet</button>
+  <div class="status" id="status">Δωρεάν soulbound badge · δεν είναι επένδυση</div>
+
+  <div class="meta">
+    <div>CONTRACT · <code id="addrShort">—</code></div>
+    <div class="sb">SOULBOUND · NON-TRANSFERABLE · BASE</div>
+  </div>
+
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ethers/6.13.4/ethers.umd.min.js"></script>
+<script>
+/* ============================================================
+   ΡΥΘΜΙΣΕΙΣ — βάλε εδώ τη διεύθυνση του contract μετά το deploy
+   ============================================================ */
+const CONFIG = {
+  contract: "0x2B016E704583A9C12b78972e189F09D6375efF14", // StratoshiVibes ΑΙΘΗΡ (Base)
+  chainIdHex: "0x2105",        // Base mainnet (8453)
+  chainName: "Base",
+  rpc: "https://mainnet.base.org",
+  explorer: "https://basescan.org",
+};
+
+const ABI = [
+  "function mint() returns (uint256)",
+  "function balanceOf(address owner) view returns (uint256)",
+  "function mintingActive() view returns (bool)",
+  "function totalMinted() view returns (uint256)",
+  "function tokenURI(uint256 id) view returns (string)",
+  "function ownerOf(uint256 id) view returns (address)",
+  "event Transfer(address indexed from, address indexed to, uint256 indexed tokenId)"
+];
+
+let provider, signer, contract, account;
+const $ = id => document.getElementById(id);
+const btn = $("actionBtn"), statusEl = $("status");
+
+function setStatus(html, cls=""){ statusEl.innerHTML = `<span class="${cls}">${html}</span>`; }
+
+$("addrShort").textContent =
+  CONFIG.contract.slice(0,6) + "…" + CONFIG.contract.slice(-4);
+
+/* ---- σύνδεση wallet ---- */
+async function connect(){
+  if(!window.ethereum){
+    setStatus("Δεν βρέθηκε wallet. Άνοιξέ το από MetaMask / Coinbase Wallet.", "err");
+    return;
+  }
+  try{
+    provider = new ethers.BrowserProvider(window.ethereum);
+    await provider.send("eth_requestAccounts", []);
+    await ensureBase();
+    signer = await provider.getSigner();
+    account = await signer.getAddress();
+    contract = new ethers.Contract(CONFIG.contract, ABI, signer);
+    await refresh();
+  }catch(e){
+    setStatus(humanError(e), "err");
+  }
+}
+
+/* ---- έλεγχος / αλλαγή δικτύου σε Base ---- */
+async function ensureBase(){
+  const net = await provider.send("eth_chainId", []);
+  if(net === CONFIG.chainIdHex) return;
+  try{
+    await provider.send("wallet_switchEthereumChain", [{chainId: CONFIG.chainIdHex}]);
+  }catch(err){
+    if(err.code === 4902 || (err.data && err.data.originalError && err.data.originalError.code === 4902)){
+      await provider.send("wallet_addEthereumChain", [{
+        chainId: CONFIG.chainIdHex,
+        chainName: CONFIG.chainName,
+        nativeCurrency: { name:"Ether", symbol:"ETH", decimals:18 },
+        rpcUrls: [CONFIG.rpc],
+        blockExplorerUrls: [CONFIG.explorer]
+      }]);
+    }else{ throw err; }
+  }
+}
+
+/* ---- διαβάζει κατάσταση & ρυθμίζει το κουμπί ---- */
+async function refresh(){
+  setStatus("Έλεγχος κατάστασης…");
+  const [active, bal, total] = await Promise.all([
+    contract.mintingActive(),
+    contract.balanceOf(account),
+    contract.totalMinted()
+  ]);
+
+  if(bal > 0n){
+    const id = await findMyTokenId();
+    btn.disabled = true;
+    btn.textContent = "Έχεις ήδη το badge σου ✓";
+    setStatus(`Είσαι μέλος ${id!==null?`· badge #${id}`:""}. Total minted: ${total}.`, "ok");
+    if(id!==null) renderBadge(id);
+    return;
+  }
+  if(!active){
+    btn.disabled = true;
+    btn.textContent = "Το minting είναι κλειστό";
+    setStatus(`Total minted μέχρι τώρα: ${total}.`);
+    return;
+  }
+  btn.disabled = false;
+  btn.textContent = "Mint το ΑΙΘΗΡ badge σου";
+  btn.onclick = doMint;
+  setStatus(`Συνδεδεμένος · ${account.slice(0,6)}…${account.slice(-4)} · δωρεάν, ένα ανά wallet`, "ok");
+}
+
+/* ---- mint ---- */
+async function doMint(){
+  try{
+    btn.disabled = true;
+    btn.textContent = "Επιβεβαίωσε στο wallet…";
+    setStatus("Στείλε τη συναλλαγή από το wallet σου.");
+    const tx = await contract.mint();
+    btn.textContent = "Γίνεται mint…";
+    setStatus(`Συναλλαγή: <a href="${CONFIG.explorer}/tx/${tx.hash}" target="_blank">δες στο BaseScan</a>`);
+    const rcpt = await tx.wait();
+
+    let id = null;
+    for(const log of rcpt.logs){
+      try{
+        const p = contract.interface.parseLog(log);
+        if(p && p.name === "Transfer" &&
+           p.args.to.toLowerCase() === account.toLowerCase()){
+          id = p.args.tokenId.toString();
+        }
+      }catch(_){}
+    }
+    btn.textContent = "Το badge σου είναι έτοιμο ✓";
+    setStatus(`Καλωσήρθες στην κοινότητα${id!==null?` · badge #${id}`:""}! 🜂`, "ok");
+    if(id!==null) renderBadge(id);
+  }catch(e){
+    btn.disabled = false;
+    btn.textContent = "Mint το ΑΙΘΗΡ badge σου";
+    setStatus(humanError(e), "err");
+  }
+}
+
+/* ---- βρίσκει το tokenId του χρήστη ελέγχοντας ownerOf (αξιόπιστο) ---- */
+async function findMyTokenId(){
+  try{
+    const reader = new ethers.Contract(CONFIG.contract, ABI, provider);
+    const total = Number(await reader.totalMinted());
+    // ψάχνει από το πιο πρόσφατο προς το παλιότερο
+    for(let i = total; i >= 1; i--){
+      try{
+        const owner = await reader.ownerOf(i);
+        if(owner.toLowerCase() === account.toLowerCase()) return i.toString();
+      }catch(_){}
+    }
+  }catch(_){}
+  return null;
+}
+
+/* ---- τραβάει το πραγματικό on-chain SVG του badge ---- */
+async function renderBadge(id){
+  try{
+    const reader = new ethers.Contract(CONFIG.contract, ABI, provider);
+    const uri = await reader.tokenURI(id);
+    const json = JSON.parse(atob(uri.split(",")[1]));
+    const svg = atob(json.image.split(",")[1]);
+    $("badgeFrame").innerHTML = svg;
+    $("previewNote").textContent = "ΖΩΝΤΑΝΟ · ΑΠΕΥΘΕΙΑΣ ΑΠΟ ΤΟ CHAIN";
+  }catch(_){}
+}
+
+/* ---- φιλικά μηνύματα λάθους ---- */
+function humanError(e){
+  const m = (e && (e.shortMessage || e.message || "")).toLowerCase();
+  if(m.includes("user rejected") || m.includes("denied")) return "Ακύρωσες τη συναλλαγή.";
+  if(m.includes("one per wallet")) return "Αυτό το wallet έχει ήδη badge.";
+  if(m.includes("minting closed")) return "Το minting είναι κλειστό.";
+  if(m.includes("insufficient funds")) return "Δεν έχεις αρκετό ETH για το gas (Base).";
+  return "Κάτι πήγε στραβά. Δοκίμασε ξανά.";
+}
+
+btn.onclick = connect;
+if(window.ethereum){
+  window.ethereum.on?.("accountsChanged", ()=>location.reload());
+  window.ethereum.on?.("chainChanged", ()=>location.reload());
+}
+</script>
+</body>
+</html>
