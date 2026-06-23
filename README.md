@@ -34,7 +34,7 @@ Verified contract, χωρίς κρυφό mint, χωρίς admin backdoor στη�
 | Standard | ERC-721 (soulbound) |
 | Oracle | Chainlink ETH/USD Data Feed |
 | Artwork | On-chain SVG (base64 data URI) |
-| Contract | `0x2B016E704583A9C12b78972e189F09D6375efF14` |
+| Contract | [`0x2B016E704583A9C12b78972e189F09D6375efF14`](https://basescan.org/address/0x2B016E704583A9C12b78972e189F09D6375efF14#code) |
 
 ## Δομή
 
